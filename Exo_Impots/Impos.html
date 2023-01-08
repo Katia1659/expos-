@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Impots</title>
+</head>
+<body>
+  <h1> Situation Fiscale </h1>
+    <div id="contneur">
+      <fieldset>
+        <div id="info">
+        <label for="name"> Nom de Famille: </label><br />
+        <input type="text" id="nom"  placeholder="Nom"><br/ >
+        <label for="name"> Prénom : </label><br/>
+        <input type="text" id="prenom"  placeholder="Prénom"><br/ >
+        <label for="age">Age*:</label><br/>
+        <input type="number" name="persons" id="age" min="1" max="100"><br />
+         <label for="Sex" id="sex">Homme*</label>
+         <input type="radio" id="homme" name="options" value="homme">
+         <label for="Sex" id="sex">Femme*</label>
+         <input type="radio" id="femme" name="options" value="femme"><br/ >
+
+         
+         <button id="submit">valider</button>
+        </div>
+         <div id="txt" >
+          <p id="ph1" class="vis"> 
+            
+            << Veuillez remplire toutes les champs avec vos informations correct! >>
+          
+          </p> 
+          <p>* champs obligatoire.</p>
+           
+          <p id="ph2" class="invis">
+            Mr. "nom" "prénom" vous avez "age", donc vous ête imposable.
+          </p>
+         </div>
+        
+      </fieldset>
+      <div id="mag">
+        <img id="img" src="1 form.jpg" alt="tax">
+      </div>
+      
+     </div>
+    
+    <script src="script.js"></script>
+    
+  </body>
+</html>

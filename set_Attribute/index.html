@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body{
+            padding: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        #target{
+            margin: 50px;
+            width:100px; 
+            height:100px;
+        }
+
+    </style>
+    
+    <div id="target" title="box" style=" background:green"></div>
+
+    <div>
+
+        <button onclick="document.getElementById('target').setAttribute('style','background:violet')">A </button>
+
+        <button onclick="document.getElementById('target').setAttribute('style','background:blue')">B </button>
+
+    </div>
+
+    <div id="exp" style="visibility: hidden;">
+        <ul>
+            <li> Dans ce exemple les instruction JS sont <span style="font-weight: bold;"> INLINE </span>  </li><br>
+            <il><img src="inline.jpg" alt="...."></il><br>             
+
+        </ul>
+    </div>
+
+    <script>
+            document.getElementById('target').addEventListener("dblclick", function(){document.getElementById('exp').setAttribute('style','visibiloty:visible;');});
+        </script>
+    
+    
+    
+</body>
+</html>

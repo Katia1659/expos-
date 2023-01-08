@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get_Element_byID</title>
+    
+</head>
+<body>
+    <style>
+        p,h1{
+            text-align: center;
+            margin: 100px;
+        }
+        button{
+
+        }
+
+        #div1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+    </style>
+    <div id="div1">
+    <h1 id="myTitl">Hello World!</h1>
+
+    <p style="font-size: larger;">Passer la souris sur le texte pour voir la magie !</p>
+    <button id="btn"> puls Intéressant !</button>
+
+    </div>
+    
+
+    <div id="div2" style="visibility:hidden;">
+        <h3 style="text-align: center;">Pour cela j'ai utiliser l'EventListner: </h3>
+        <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ; background-color: antiquewhite; padding: 50px;">
+
+          Sript:  <span style="color: blue;">document</span>.
+                  <span style="color: rgb(204, 0, 255);">getElementById</span>(
+                   <span style="color: brown;">"myTitle"</span>)
+                   <span>.</span>
+                   <span style="color: rgb(204, 0, 255);">addEventListener</span>
+                   <span>(</span>
+                   <span style="color: brown;">"mouseover"</span>,
+                   <span style="color: rgb(0, 153, 255);">function()</span>{
+                   <span style="color: blue;">document</span>.
+                   <span style="color: rgb(204, 0, 255);">getElementById</span>(
+                   <span style="color: brown;">"myTitle"</span>).
+                   <span style="color: blue;">innerHTML</span>=
+                   <span style="color: brown;">"Did you miss me ?!"</span>;});
+       </p>
+    </div>    
+         
+
+    
+
+    <script>
+    // Script pour modifier le titre :
+    let newTitle=document.getElementById("myTitl");
+    newTitle.addEventListener("mouseover", function (){newTitle.innerHTML="Did you miss me !!?"});
+   
+    //  Script eventLinstner pour afficher la div:
+    let btn=document.getElementById ("btn");
+    btn.addEventListener("click", function(){document.getElementById("div2").setAttribute('style','visibility:visible');});
+    
+  
+    </script>
+    
+</body>
+</html>

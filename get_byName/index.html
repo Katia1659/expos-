@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get_Element_byName</title>
+</head>
+<body>
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            justify-content: first baseline;
+            align-items: center;
+        }
+        #div2{
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+        #div3{
+            
+            font-size: x-large;
+            display: flex;
+            flex-direction: column;
+            align-items: center
+            
+        }
+    </style>
+    <div id="container">
+        <h1>The Document Object</h1>
+        <h2>The document.getElementsByName Method</h2>
+
+        
+      
+        <ul id="list">
+           <li name ="lang" >Python</li>
+           <li name ="lang" >JavaScript</li>
+           <li name ="lang" >PHP</li>
+        </ul>
+
+        <p> connaissez-vous d'autres language ?! </p>
+        <button onclick="show()"> Ajouter!</button>
+
+        
+    
+        
+    
+
+            
+    </div>
+
+    <div id="div2" style="visibility:hidden;">
+        <h3 style="text-align: center;"> ajouter  à la liste:   </h3>
+        <label for="nom"> nom :</label>
+        <input id="nwe" type="nom"><br>
+        <button onclick="myFunction()">Entrer</button><br><br>
+        <p id="result">nombre d'elements avec name="lang" est :  <span id="demo"></span></p>
+    </div>  
+    
+    <div id="div3" style="visibility: hidden;">
+        <ul>
+            <li> JavaScript peut ajouter / supprimer des élémenet </li><br>
+            <il><img src="creat.jpg" alt="...."></il><br>
+            <li> Elle peut afficher / Masquer des éléments HTML </li><br>
+            <il><img src="show.jpg" alt="...."></il><br>
+            <li> Elle permet d'afficher des alerts sous forme de messages!</li><br>
+            <il><img src="alert.jpg" alt=""></il><br>
+            <li> Tout ça est possibles grace au condition JS soit directement ou à l'intérieurs des boucles </li><br>
+            <il> <img src="condition.jpg" alt=""></il><br>
+            
+        </ul>
+    </div>
+    
+
+    <script>
+
+      function show(){
+        let div2= document.getElementById('div2');
+        div2.setAttribute('style','visibility:visible;')
+      }
+      
+      function myFunction(){
+
+        let nwe = document.getElementById("nwe").value;
+
+        if(nwe == "" ){
+        
+          alert ("le Champ n'est pas remplie !");
+           return false;
+        }
+        else{
+        let nweLang= document.createElement('li');
+
+
+        nweLang.setAttribute("name","lang");
+        nweLang.innerHTML=  nwe;
+        var ulContainer = document.getElementById("list");
+        ulContainer.appendChild(nweLang);
+        const num = document.getElementsByName("lang").length;
+        document.getElementById("demo").innerHTML = num;
+        return true;
+           
+        };
+        
+        
+        }   
+   
+        document.getElementById('result').addEventListener('mouseover',function (){document.getElementById('div3').setAttribute('style','visibility:visible')});
+
+      
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get_Element_byTagName</title>
+</head>
+<body>
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            justify-content: first baseline;
+            align-items: center;
+        }
+    </style>
+    <div id="container">
+    <h1 id="title">The Element Object</h1>
+    <h2>The getElementsByTagName() Method</h2>
+
+    <ul>
+       <li>Python</li>
+       <li>SQL</li>
+       <li>PHP</li>
+   </ul>
+
+  <p>Click "Correct" to correct the list.</p>
+  <button onclick="myFunction()">Correct</button>
+  <p id="exp"></p>
+  
+
+    </div>
+
+    <div id="div2" style="visibility:hidden;">
+        <h3 style="text-align: center;"> </h3>
+       <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ; background-color: antiquewhite; padding: 50px; text-align: center;">
+
+        Ici on peut voire comment Java Scripte agit à travers le <span style="font-weight: bold;">DOM </span>
+        sur le fichier<span style="font-weight: bold;"> HTML</span>: <br><br>
+        Dans cette arborescence logique du document HTML elle considere les balises de meme nom dans notre exemple <"ul">  comme des objet qui contient les lignes <"li"> impréquer à l'intérieur et les manipule comme des tableaux. <br><br>
+        <img  src="Capture d’écran 2023-01-07 225723.jpg" alt="">
+         <br><br>
+       Avec cette méthode java scripte peut agire sur tagName ("ul")[0] "en position 1" dans notre fichier <span style="font-weight: bold;"> HTML</span> qui contien la ligne ("li")[1] "en position 2" et modifier sa valeur ! <br><br>
+
+          Sript:   <span style="color: blue;">document</span>.
+                   <span style="color: rgb(204, 0, 255);">getElementByTagName</span>(
+                   <span style="color: brown;">"ul"</span>)
+                   <span style="color: rgb(204, 0, 255);">[</span>
+                   0
+                   <span style="color: rgb(204, 0, 255);">]</span>
+                   <span>.</span>
+                   <span style="color: rgb(204, 0, 255);">getElementByTagName</span>(
+                    (
+                   <span style="color: brown;">"il"</span>)
+                   <span style="color: rgb(204, 0, 255);">[</span>
+                   1
+                   <span style="color: rgb(204, 0, 255);">]</span>.
+                    <span style="color: blue;">innerHTML</span>=
+                   <span style="color: brown;">"Js-JavaScript"</span>;});
+       </p>
+    </div>   
+    
+
+    <script>
+      function myFunction() {
+           let list = document.getElementsByTagName("ul")[0];
+           list.getElementsByTagName("li")[1].innerHTML = "JS-JavaScipt";
+
+           document.getElementById("exp").innerHTML="Clicker sur le titre pour avaoir plus d'explication! "
+           };
+
+           
+           
+            
+           let exp= document.getElementById("title");
+           exp.addEventListener("click",function (){ document.getElementById('div2').setAttribute('style','visibility:visible');});
+
+
+               </script>
+</body>
+</html>
